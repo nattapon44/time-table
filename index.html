@@ -12,6 +12,44 @@
         background-repeat: repeat-x;
         background-size: cover;
         }
+
+        .button-container {
+            text-align: center;
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button::after {
+            content: "\2190"; /* Unicode character for left arrow */
+            margin-left: 5px;
+        }
+
+        .back-button:hover::after {
+            animation: arrow-fade 0.5s infinite alternate; /* Animate arrow on hover */
+        }
+
+        @keyframes arrow-fade {
+            from {
+            opacity: 0;
+            transform: translateX(-3px);
+            }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+            }
+        }
     </style>
     <link rel="icon" type="image/png" href="./LegalDoc/browser-gauge.png">
     <link rel="stylesheet" href="./LegalDoc/font-awesome.min.css">
@@ -28,7 +66,9 @@
                 <br>
                 A Mathematical Model for Course Schedule at Department of Statistics, Faculty of Science, Khon Kaen University. </strong><br>
             </h1>
-            
+            <div class="button-container">
+                <a href="/" class="back-button">Back to Home</a>
+            </div>
             <!-- <center><img src="\\wsl$\Ubuntu-20.04\root\Web\LegalDoc_NLP\LegalDoc\S__6717445.jpg" height="300px"><br></div></center> -->
         </div>
         <div class="row">
